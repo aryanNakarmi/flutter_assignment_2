@@ -19,7 +19,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Arithmetic Screen"),
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: Colors.purple,
       ),
       body: Padding(
         padding: EdgeInsetsGeometry.all(20),
