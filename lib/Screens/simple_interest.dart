@@ -65,10 +65,13 @@ class _SimpleInterestState extends State<SimpleInterest> {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(onPressed: (){
+              setState(() {
+                
               interest = (principal*rate*time)/100;
+              });
             }, child: Text("Calculate Interest")),
           ),
-          Text("Simple Interest: ${interest}"),
+          Text("Simple Interest: $interest"),
         ],
       ),
       ),
