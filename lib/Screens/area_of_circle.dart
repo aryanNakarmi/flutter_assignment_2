@@ -8,8 +8,48 @@ class AreaOfCircle extends StatefulWidget {
 }
 
 class _AreaOfCircleState extends State<AreaOfCircle> {
+  double radius = 0 ;
+  double area = 0 ;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Area of Circle"),
+        backgroundColor: Colors.green,
+  
+      ),
+      body: Padding(padding: EdgeInsetsGeometry.all(20),
+      child: Column(
+        children: [
+
+          TextField(
+            onChanged: (value) {
+              radius = double.parse(value);
+            },
+            decoration: InputDecoration(
+              labelText: "Enter Radius of Circle",
+              hintText: "e.g. 4",
+              border: OutlineInputBorder(),
+            ),
+          ),
+
+          SizedBox(height: 40,),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(onPressed: (){
+                setState(() {
+                  
+                  area = 3.14 * radius * radius;
+                });
+            }, child: Text("Calculate Area")),
+          ),
+
+          SizedBox(height: 30,),
+
+          Text("Area of Circle: $area")
+        ],
+      ),),
+    );
   }
 }
