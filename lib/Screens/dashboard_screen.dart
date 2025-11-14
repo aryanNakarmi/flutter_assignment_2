@@ -14,16 +14,43 @@ class DashboardScreen extends StatelessWidget {
           children: [
             SizedBox(height: 20,),
           
+            SizedBox(
+              width: 200,
+              height: 50,
+              
+              child: ElevatedButton(
+              onPressed: (){},
+               child: Text("Arithmetic Screen")),
+            ),
+
+            SizedBox(height: 20,),
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(onPressed: (){},
+               child: Text("Simple Interest Screen")),
+            ),
+
+            SizedBox(height: 20,),
 
             SizedBox(
-              
               width: 200,
               height: 50,
               child: ElevatedButton(
-              onPressed: (){},
+                onPressed: (){},
+               child: Text("Palindrome")),
+            ),
 
-               child: Text("Arithmetic Screen")),
+            SizedBox(height: 20,),
+
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: (){},
+               child: Text("Area of Circle")),
             )
+
           ],
         ),
 
