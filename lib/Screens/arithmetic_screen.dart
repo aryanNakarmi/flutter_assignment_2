@@ -97,8 +97,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                 });
 
               }, child: Text("Divide"),
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(Colors.cyanAccent),),),
+             ),
             ),
             
             Text("Result: $result"),
