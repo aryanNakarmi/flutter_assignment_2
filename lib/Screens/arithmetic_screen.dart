@@ -28,6 +28,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
             SizedBox(height: 20,),
 
             TextField(
+            
               onChanged: (value) {
                 first = double.parse(value);
               },
@@ -55,6 +56,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
 
               //for Sum
             SizedBox(
+              width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 setState(() {
                   result = first+ second;
@@ -65,6 +67,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
 
               //for Product
             SizedBox(
+              width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 setState(() {
                   result = first * second;
@@ -75,6 +78,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
 
               //for SUbrraction
             SizedBox(
+              width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 setState(() {
                   result = first - second;
@@ -85,12 +89,16 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
 
               //for division
             SizedBox(
+              width: double.infinity,
+
               child: ElevatedButton(onPressed: (){
                 setState(() {
                   result = first/second;
                 });
 
-              }, child: Text("Divide")),
+              }, child: Text("Divide"),
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.cyanAccent),),),
             ),
             
             Text("Result: $result"),
