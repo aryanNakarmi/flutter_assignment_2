@@ -9,6 +9,7 @@ class Palindrome extends StatefulWidget {
 
 class _PalindromeState extends State<Palindrome> {
   int number = 0;
+  int reversedNum = 0;
   String result = "";
 
   @override
@@ -39,6 +40,19 @@ class _PalindromeState extends State<Palindrome> {
               SizedBox(
                 child: ElevatedButton(onPressed: (){
                   setState(() {
+                    int temp = number;
+
+                    while(temp>0){
+                      int digit  = temp%10;
+                      reversedNum = (reversedNum*10)+digit;
+                      temp= temp~/10;
+                    }
+                    if(number == reversedNum){
+                      result = "$number is a palindrome";
+                    }
+                    else{
+                      result = "$number isn't a palindrome";
+                    }
                     
                   });
                 }, child: Text("Check if the Number is Palindrome")),
