@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
+import 'package:flutter_assignment_2/Screens/palindrome.dart';
 import 'package:flutter_assignment_2/Screens/simple_interest.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -47,7 +48,9 @@ class DashboardScreen extends StatelessWidget {
               width: 200,
               height: 50,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Palindrome()));
+                },
                child: Text("Palindrome")),
             ),
 
