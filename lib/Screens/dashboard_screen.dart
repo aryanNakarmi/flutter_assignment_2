@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
+import 'package:flutter_assignment_2/Screens/simple_interest.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -20,7 +21,10 @@ class DashboardScreen extends StatelessWidget {
               height: 50,
               
               child: ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context)=> const ArithmeticScreen()));
+              },
                child: Text("Arithmetic Screen")),
             ),
 
@@ -31,7 +35,7 @@ class DashboardScreen extends StatelessWidget {
               child: ElevatedButton(onPressed: (){
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context)=> const ArithmeticScreen())
+                  MaterialPageRoute(builder: (context)=> const SimpleInterest())
                 );
               },
                child: Text("Simple Interest Screen")),
@@ -53,7 +57,9 @@ class DashboardScreen extends StatelessWidget {
               width: 200,
               height: 50,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  
+                },
                child: Text("Area of Circle")),
             )
 
