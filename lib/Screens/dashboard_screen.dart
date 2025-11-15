@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_2/Screens/area_of_circle.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
 import 'package:flutter_assignment_2/Screens/simple_interest.dart';
@@ -61,7 +62,7 @@ class DashboardScreen extends StatelessWidget {
               height: 50,
               child: ElevatedButton(
                 onPressed: (){
-                  
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AreaOfCircle())) ;
                 },
                child: Text("Area of Circle")),
             )
