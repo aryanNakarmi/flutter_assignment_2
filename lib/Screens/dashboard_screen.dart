@@ -10,8 +10,10 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Dashboard"),
-      backgroundColor: Colors.amberAccent,),
+      appBar: AppBar(title: Text("Dashboard", style: TextStyle(color: Colors.white),),
+      backgroundColor: Colors.black,
+       centerTitle: true,),
+    
       body: Padding(
         padding: EdgeInsetsGeometry.all(10),
         child: Column(
@@ -19,52 +21,59 @@ class DashboardScreen extends StatelessWidget {
             SizedBox(height: 20,),
           
             SizedBox(
-              width: 200,
-              height: 50,
-              
+              width: double.infinity,        
               child: ElevatedButton(
+            
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
               onPressed: (){
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context)=> const ArithmeticScreen()));
               },
-               child: Text("Arithmetic Screen")),
+               child: Text("Arithmetic Screen",style: TextStyle(color: Colors.white)),
+               
+               ),
             ),
 
             SizedBox(height: 20,),
             SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(onPressed: (){
+              width: double.infinity,
+         
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey),
+                onPressed: (){
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context)=> const SimpleInterest())
                 );
               },
-               child: Text("Simple Interest Screen")),
+               child: Text("Simple Interest Screen", style: TextStyle(color: Colors.white),)),
             ),
 
             SizedBox(height: 20,),
 
             SizedBox(
-              width: 200,
-              height: 50,
+              width: double.infinity,
+        
               child: ElevatedButton(
+            
+                style: ElevatedButton.styleFrom(side: BorderSide(width: 2)),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Palindrome()));
                 },
-               child: Text("Palindrome")),
+               child: Text("Palindrome",style: TextStyle(color: Colors.black),)),
             ),
 
             SizedBox(height: 20,),
 
             SizedBox(
-              width: 200,
-              height: 50,
+              width: double.infinity,
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.green ),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AreaOfCircle())) ;
                 },
-               child: Text("Area of Circle")),
+               child: Text("Area of Circle", 
+               style: TextStyle(color: Colors.white)),),
             )
 
           ],
