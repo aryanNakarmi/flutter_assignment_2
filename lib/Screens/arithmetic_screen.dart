@@ -19,7 +19,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Arithmetic Screen"),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.orange,
       ),
       body: Padding(
         padding: EdgeInsetsGeometry.all(20),
@@ -62,7 +62,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   result = first+ second;
                 });
 
-              }, child: Text("Sum")),
+              }, child: Text("Sum", style: TextStyle(color: Colors.black),)),
             ),
 
               //for Product
@@ -73,7 +73,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   result = first * second;
                 });
 
-              }, child: Text("Multiply")),
+              }, child: Text("Multiply", style: TextStyle(color: Colors.black))),
             ),
 
               //for SUbrraction
@@ -84,7 +84,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   result = first - second;
                 });
 
-              }, child: Text("Subtract")),
+              }, child: Text("Subtract", style: TextStyle(color: Colors.black))),
             ),
 
               //for division
@@ -96,7 +96,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   result = first/second;
                 });
 
-              }, child: Text("Divide"),
+              }, child: Text("Divide", style: TextStyle(color: Colors.black)),
              ),
             ),
             
