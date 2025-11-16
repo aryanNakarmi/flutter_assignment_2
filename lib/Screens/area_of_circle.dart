@@ -15,7 +15,7 @@ class _AreaOfCircleState extends State<AreaOfCircle> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Area of Circle"),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green, centerTitle: true,
   
       ),
       body: Padding(padding: EdgeInsetsGeometry.all(20),
@@ -42,7 +42,7 @@ class _AreaOfCircleState extends State<AreaOfCircle> {
                   
                   area = 3.14 * radius * radius;
                 });
-            }, child: Text("Calculate Area")),
+            }, child: Text("Calculate Area", style: TextStyle(color: Colors.black))),
           ),
 
           SizedBox(height: 30,),
