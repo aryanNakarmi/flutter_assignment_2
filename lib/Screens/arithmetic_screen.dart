@@ -20,6 +20,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
       appBar: AppBar(
         title: Text("Arithmetic Screen"),
         backgroundColor: Colors.orange,
+        centerTitle: true,
       ),
       body: Padding(
         padding: EdgeInsetsGeometry.all(20),
