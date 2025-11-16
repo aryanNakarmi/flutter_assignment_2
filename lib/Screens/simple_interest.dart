@@ -17,7 +17,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Simple Interest"),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blueGrey,centerTitle: true,
       ),
       body: Padding(padding: EdgeInsetsGeometry.all(20),
       child: Column(

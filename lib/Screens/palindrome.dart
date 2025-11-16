@@ -38,6 +38,7 @@ class _PalindromeState extends State<Palindrome> {
               SizedBox(height: 30,),
 
               SizedBox(
+
                 child: ElevatedButton(onPressed: (){
                   setState(() {
                     int temp = number;
