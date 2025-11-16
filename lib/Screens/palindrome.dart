@@ -57,10 +57,10 @@ class _PalindromeState extends State<Palindrome> {
                     }
                     
                   });
-                }, child: Text("Check if the Number is Palindrome")),
+                }, child: Text("Check if the Number is Palindrome", style: TextStyle(color: Colors.black))),
               ),
 
-              Text("$result"),
+              Text(" $result"),
             ],
 
         ),),

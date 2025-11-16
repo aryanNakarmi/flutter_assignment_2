@@ -24,7 +24,7 @@ class DashboardScreen extends StatelessWidget {
               width: double.infinity,        
               child: ElevatedButton(
             
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
               onPressed: (){
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context)=> const ArithmeticScreen()));
