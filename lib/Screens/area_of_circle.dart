@@ -29,7 +29,19 @@ class _AreaOfCircleState extends State<AreaOfCircle> {
             decoration: InputDecoration(
               labelText: "Enter Radius of Circle",
               hintText: "e.g. 4",
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.green,
+                )
+              ),
+
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.pink)
+              )
+              
             ),
           ),
 
