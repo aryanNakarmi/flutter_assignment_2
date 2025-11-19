@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Screens/area_of_circle.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
+import 'package:flutter_assignment_2/Screens/flutter_layout.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
 import 'package:flutter_assignment_2/Screens/rich_text.dart';
 import 'package:flutter_assignment_2/Screens/simple_interest.dart';
@@ -87,7 +88,19 @@ class DashboardScreen extends StatelessWidget {
                 onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>RichTextScreen()));
               }, child: Text("Rich Text Screen", style: TextStyle(color: Colors.white),)),
+            ),
+
+            SizedBox(height: 20,),
+
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+                onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FlutterLayoutScreen()));
+              }, child: Text("Rich Text Screen", style: TextStyle(color: Colors.white),)),
             )
+
 
           ],
         ),
