@@ -9,26 +9,43 @@ class FlutterLayoutScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter Layout Screen"),
         backgroundColor: Colors.amber,
+
       ),
-      body: Container(
-        width: 300,
-        height: 200,
-        padding: EdgeInsets.only(left: 20,top:50),
-        decoration:  BoxDecoration(
-         border: Border.all(color: Colors.black)
-        ),
-       
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-
-            Column(children: [Icon(Icons.call),Text("Call")],),
-            Spacer(),
-            Column(children: [Icon(Icons.route),Text("Route")],),
-            Spacer(),
-            
-
-          ],
+      body: Center(
+        child: Container(
+          width: 300,
+          height: 90,
+          
+          padding: EdgeInsets.all(20),
+        
+          decoration:  BoxDecoration(
+           border: Border.all(color: Colors.black)
+          ),
+         
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+        
+              Column(
+                children: [
+                Icon(Icons.call),
+                Text("Call")],),
+              Spacer(),
+              Column(
+                children: [
+                  Icon(Icons.route),
+                  Text("Route")],),
+              Spacer(),
+              Column(
+                children: [
+                  Icon(Icons.share),
+                  Text("Share")
+                  ],
+                  )
+        
+        
+            ],
+          ),
         ),
       ),
     );
