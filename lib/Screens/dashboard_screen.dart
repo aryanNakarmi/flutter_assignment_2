@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Screens/area_of_circle.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
+import 'package:flutter_assignment_2/Screens/rich_text.dart';
 import 'package:flutter_assignment_2/Screens/simple_interest.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -74,6 +75,18 @@ class DashboardScreen extends StatelessWidget {
                 },
                child: Text("Area of Circle", 
                style: TextStyle(color: Colors.white)),),
+            ),
+
+
+            SizedBox(height: 20,),
+
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[600]),
+                onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RichTextScreen()));
+              }, child: Text("Rich Text Screen", style: TextStyle(color: Colors.white),)),
             )
 
           ],
