@@ -21,6 +21,11 @@ class RichTextScreen extends StatelessWidget {
           
 
             children: <TextSpan>[
+            TextSpan(text: "H",
+            style: TextStyle(color: Colors.blue)
+            ),
+            TextSpan(text: "ello "),
+
             TextSpan(text: "bold",
             style: TextStyle(
               fontWeight: FontWeight.bold,
