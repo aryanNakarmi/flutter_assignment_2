@@ -12,39 +12,46 @@ class ColumnScreen extends StatelessWidget {
       ),
       body: Container(
       color: Colors.yellow,
+      width: double.infinity,
       child:    
       Column(
-        
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
          
-          Column(
-            children: [
-          Icon(Icons.star,size:50,color: Colors.pink,),
-          Icon(Icons.star,size:50,color: Colors.pink,),
-              
+              TextButton(onPressed: (){}, child: const Text("Button1")),
+              ElevatedButton(onPressed: (){}, child: const Text("Button2")),
+              OutlinedButton(onPressed: (){}, child: const Text("Button3")),
             ],
-          ),
-          
-
-          Column(children: [
-          Icon(Icons.star_border,size:100),
-
-
-          ],),
-
-          Column(children: [
-        
-          Icon(Icons.star,size:50,color: Colors.white),
-          Icon(Icons.star,size:50,color: Colors.white),
-          Icon(Icons.star,size:50,color: Colors.white),
-
-          ],)
-
-      
-        ],
         
       ),
+      // Column(
+        
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // children: const [
+         
+          // Column(
+          //   children: [
+          // Icon(Icons.star,size:50,color: Colors.pink,),
+          // Icon(Icons.star,size:50,color: Colors.pink,),
+          //   ],
+          // ),
+
+          // Column(children: [
+          // Icon(Icons.star_border,size:100),
+          // ],),
+
+          // Column(children: [
+          // Icon(Icons.star,size:50,color: Colors.white),
+          // Icon(Icons.star,size:50,color: Colors.white),
+          // Icon(Icons.star,size:50,color: Colors.white),
+          // ],)
+
+
+      
+        // ],
+        
+      // ),
     )
      );
   }
