@@ -8,8 +8,11 @@ class AreaOfCircle extends StatefulWidget {
 }
 
 class _AreaOfCircleState extends State<AreaOfCircle> {
-  double radius = 0 ;
+  // double radius = 0 ;
+  final TextEditingController radiusController = TextEditingController(text: "2");
   double area = 0 ;
+
+  final _formKey= GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,48 +22,60 @@ class _AreaOfCircleState extends State<AreaOfCircle> {
   
       ),
       body: Padding(padding: EdgeInsetsGeometry.all(20),
-      child: Column(
-        children: [
-
-          TextField(
-            onChanged: (value) {
-              radius = double.parse(value);
-            },
-            decoration: InputDecoration(
-              labelText: "Enter Radius of Circle",
-              hintText: "e.g. 4",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.green,
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+        
+            TextFormField(
+              keyboardType: TextInputType.number,
+              controller: radiusController,
+              decoration: InputDecoration(
+                labelText: "Enter Radius of Circle",
+                hintText: "e.g. 4",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.green,
+                  )
+                ),
+        
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.pink)
                 )
+                
               ),
-
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.pink)
-              )
+              validator: (value) {
+                if(value == null || value.isEmpty){
+                  return "please enter radius";
+                }
+                return null;
+              },
               
             ),
-          ),
-
-          SizedBox(height: 40,),
-
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(onPressed: (){
-                setState(() {
+        
+            SizedBox(height: 40),
+        
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(onPressed: (){
                   
-                  area = 3.14 * radius * radius;
-                });
-            }, child: Text("Calculate Area", style: TextStyle(color: Colors.black))),
-          ),
-
-          SizedBox(height: 30,),
-
-          Text("Area of Circle: $area")
-        ],
+                  if(_formKey.currentState!.validate()){
+                    setState(() {
+                      double radius = double.parse(radiusController.text);
+                      area = 3.14 *radius*radius;
+                    });
+                  }
+              }, child: Text("Calculate Area", style: TextStyle(color: Colors.black))),
+            ),
+        
+            SizedBox(height: 30,),
+        
+            Text("Area of Circle: $area")
+          ],
+        ),
       ),),
     );
   }
