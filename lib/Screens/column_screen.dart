@@ -19,7 +19,7 @@ class ColumnScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
          
-              TextButton(onPressed: (){}, child: const Text("Button1")),
+              TextButton(onPressed: (){}, child: const Text("Button1" )),
               ElevatedButton(onPressed: (){}, child: const Text("Button2")),
               OutlinedButton(onPressed: (){}, child: const Text("Button3")),
             ],

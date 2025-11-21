@@ -99,7 +99,7 @@ class DashboardScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
                 onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>FlutterLayoutScreen()));
-              }, child: Text("Rich Text Screen", style: TextStyle(color: Colors.white),)),
+              }, child: Text("Flutter Screen", style: TextStyle(color: Colors.white),)),
             ),
 
             SizedBox(height: 20,),
