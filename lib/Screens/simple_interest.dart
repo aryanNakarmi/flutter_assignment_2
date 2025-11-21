@@ -34,33 +34,51 @@ class _SimpleInterestState extends State<SimpleInterest> {
         
             SizedBox(height: 20,),
         
-            TextField(
+            TextFormField(
               controller: principalController,
               decoration: InputDecoration(
                 labelText: "Enter Principal",
                 hintText: "eg. 2000",
                 border: OutlineInputBorder()
               ),
+              validator: (value) {
+                if(value == null || value.isEmpty){
+                    return "Please enter principal";
+                  }
+                  return null;
+                },
             ),
         
             SizedBox(height: 20,),
         
-            TextField(
+            TextFormField(
               controller: rateController,
               decoration: InputDecoration(
                 labelText: "Enter Rate",
                 border: OutlineInputBorder(),
               ),
+              validator: (value) {
+                if(value == null || value.isEmpty){
+                    return "Please enter rate";
+                  }
+                  return null;
+                },
             ),
         
             SizedBox(height: 20,),
         
-            TextField(
+            TextFormField(
               controller: timeController,
               decoration: InputDecoration(
                 labelText: "Enter Time",
                 border: OutlineInputBorder()
               ),
+              validator: (value) {
+                if(value == null || value.isEmpty){
+                    return "Please enter time";
+                  }
+                  return null;
+                },
             ),
         
             SizedBox(height: 20,),
@@ -74,7 +92,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                 double principal = double.parse(principalController.text);
                 double rate = double.parse(rateController.text);
                 double time = double.parse(timeController.text);
-                interest = (principal*rate*time)/100;
+                interest = (principal*rate*time)/100;4
                 });
 
                 }
