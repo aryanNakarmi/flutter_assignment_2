@@ -8,10 +8,17 @@ class SimpleInterest extends StatefulWidget {
 }
 
 class _SimpleInterestState extends State<SimpleInterest> {
-  double principal = 0;
-  double rate = 0;
-  double time = 0;
+  // double principal = 0;
+  // double rate = 0;
+  // double time = 0;
+
+  final  TextEditingController principalController = TextEditingController(text: "2");
+  final TextEditingController rateController = TextEditingController(text:"1");
+  final TextEditingController timeController = TextEditingController(text:"1");
   double interest =0;
+
+   final _formKey = GlobalKey<FormState>();
+  //  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,59 +27,62 @@ class _SimpleInterestState extends State<SimpleInterest> {
         backgroundColor: Colors.blueGrey,centerTitle: true,
       ),
       body: Padding(padding: EdgeInsetsGeometry.all(20),
-      child: Column(
-        children: [
-
-          SizedBox(height: 20,),
-
-          TextField(
-            onChanged: (value) {
-              principal =  double.parse(value);
-            },
-            decoration: InputDecoration(
-              labelText: "Enter Principal",
-              hintText: "eg. 2000",
-              border: OutlineInputBorder()
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+        
+            SizedBox(height: 20,),
+        
+            TextField(
+              controller: principalController,
+              decoration: InputDecoration(
+                labelText: "Enter Principal",
+                hintText: "eg. 2000",
+                border: OutlineInputBorder()
+              ),
             ),
-          ),
-
-          SizedBox(height: 20,),
-
-          TextField(
-            onChanged: (value) {
-              rate = double.parse(value);
-            },
-            decoration: InputDecoration(
-              labelText: "Enter Rate",
-              border: OutlineInputBorder(),
+        
+            SizedBox(height: 20,),
+        
+            TextField(
+              controller: rateController,
+              decoration: InputDecoration(
+                labelText: "Enter Rate",
+                border: OutlineInputBorder(),
+              ),
             ),
-          ),
-
-          SizedBox(height: 20,),
-
-          TextField(
-            onChanged: (value){
-              time = double.parse(value);
-            },
-            decoration: InputDecoration(
-              labelText: "Enter Time",
-              border: OutlineInputBorder()
+        
+            SizedBox(height: 20,),
+        
+            TextField(
+              controller: timeController,
+              decoration: InputDecoration(
+                labelText: "Enter Time",
+                border: OutlineInputBorder()
+              ),
             ),
-          ),
+        
+            SizedBox(height: 20,),
+        
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(onPressed: (){
+                if(_formKey.currentState!.validate()){
+                setState(() {
+                  
+                double principal = double.parse(principalController.text);
+                double rate = double.parse(rateController.text);
+                double time = double.parse(timeController.text);
+                interest = (principal*rate*time)/100;
+                });
 
-          SizedBox(height: 20,),
-
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(onPressed: (){
-              setState(() {
-                
-              interest = (principal*rate*time)/100;
-              });
-            }, child: Text("Calculate Interest")),
-          ),
-          Text("Simple Interest: $interest"),
-        ],
+                }
+              }, child: Text("Calculate Interest")),
+            ),
+            Text("Simple Interest: $interest"),
+          ],
+        ),
       ),
       ),
 
