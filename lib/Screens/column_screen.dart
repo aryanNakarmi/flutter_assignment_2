@@ -17,6 +17,7 @@ class ColumnScreen extends StatelessWidget {
         
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
+         
           Column(
             children: [
           Icon(Icons.star,size:50,color: Colors.pink,),
