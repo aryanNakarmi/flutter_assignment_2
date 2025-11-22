@@ -92,7 +92,7 @@ class _SimpleInterestState extends State<SimpleInterest> {
                 double principal = double.parse(principalController.text);
                 double rate = double.parse(rateController.text);
                 double time = double.parse(timeController.text);
-                interest = (principal*rate*time)/100;4
+                interest = (principal*rate*time)/100;
                 });
 
                 }

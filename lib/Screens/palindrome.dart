@@ -8,7 +8,8 @@ class Palindrome extends StatefulWidget {
 }
 
 class _PalindromeState extends State<Palindrome> {
-  int number = 0;
+  final TextEditingController  number = TextEditingController(text: "1");
+  // int number = 0;
  
   String result = "";
 
