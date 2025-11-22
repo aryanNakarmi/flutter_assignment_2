@@ -48,6 +48,8 @@ class _PalindromeState extends State<Palindrome> {
                 SizedBox(
             
                   child: ElevatedButton(onPressed: (){
+                    if(_formKey.currentState!.validate()){
+
                     setState(() {
                       int temp = number;
                        int reversedNum = 0;
@@ -65,6 +67,7 @@ class _PalindromeState extends State<Palindrome> {
                       }
                       
                     });
+                    }
                   }, child: Text("Check if the Number is Palindrome", style: TextStyle(color: Colors.black))),
                 ),
             
