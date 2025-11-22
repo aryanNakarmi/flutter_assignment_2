@@ -51,7 +51,8 @@ class _PalindromeState extends State<Palindrome> {
                     if(_formKey.currentState!.validate()){
 
                     setState(() {
-                      int temp = number;
+                      int num = int.parse(number.text);
+                      int temp = num;
                        int reversedNum = 0;
             
                       while(temp>0){
