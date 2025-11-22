@@ -24,6 +24,7 @@ class _PalindromeState extends State<Palindrome> {
       Padding(
         padding: EdgeInsetsGeometry.all(20),
           child: Form(
+            key: _formKey,
             child: Column(
               children: [
             
