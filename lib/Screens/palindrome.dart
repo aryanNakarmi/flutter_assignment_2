@@ -12,6 +12,7 @@ class _PalindromeState extends State<Palindrome> {
   // int number = 0;
  
   String result = "";
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
