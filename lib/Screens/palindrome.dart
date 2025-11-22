@@ -28,13 +28,18 @@ class _PalindromeState extends State<Palindrome> {
             child: Column(
               children: [
             
-                TextField(
+                TextFormField(
                   controller: number,
                   decoration: InputDecoration(
                     labelText: "Enter a Number",
                     hintText: "eg. 151",
                     border: OutlineInputBorder(),
                   ),
+                  validator: (value) {
+                    if(value==null || value.isEmpty){
+                      return "please enter a number";
+                    }
+                  },
                   
                 ),
                 SizedBox(height: 30,),
