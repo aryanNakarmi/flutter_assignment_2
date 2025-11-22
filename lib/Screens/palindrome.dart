@@ -27,7 +27,7 @@ class _PalindromeState extends State<Palindrome> {
               children: [
             
                 TextField(
-                 
+                  controller: number,
                   decoration: InputDecoration(
                     labelText: "Enter a Number",
                     hintText: "eg. 151",
