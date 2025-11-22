@@ -39,6 +39,7 @@ class _PalindromeState extends State<Palindrome> {
                     if(value==null || value.isEmpty){
                       return "please enter a number";
                     }
+                    return null;
                   },
                   
                 ),
