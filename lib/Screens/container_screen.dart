@@ -8,11 +8,26 @@ class ContainerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       body: SafeArea(
-        child:Container(
-          width: 200,
-          height: 200,
-        color: Colors.amberAccent,
-        child: const Text("I am a container"),
+        child:Center(
+          child: Container(
+            child: Text("Hello"),
+          ),
+          
+          
+          // child: Container(
+          //   width: 200,
+          //   height: 200,
+          //   alignment: Alignment.center,
+          //   child: const Text('I am a container'),
+          //   decoration: BoxDecoration(
+          //   color: Colors.amberAccent,
+          //   shape: BoxShape.circle,
+          //     border: Border.all(
+          //       color: Colors.black,
+          //       width: 2
+          //   )
+          // ),
+          // ),
         ),
 
       ),
