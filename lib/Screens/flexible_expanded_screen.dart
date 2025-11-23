@@ -13,18 +13,17 @@ class FlexibleExpandedScreen extends StatelessWidget {
       ),),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 300,
-            color: Colors.green,
-            child: Text("Container1"),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              color: Colors.green,
+              child: Text("Container1"),
+            ),
           ),
           Expanded(
-            
             child: Container(
-              height: 300,
+        
               color: Colors.amber,
-              width: double.infinity,
               child: Text("Container2"),
             ),
           )
