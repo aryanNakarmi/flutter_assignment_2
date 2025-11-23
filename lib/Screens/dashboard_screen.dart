@@ -4,6 +4,7 @@ import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
 import 'package:flutter_assignment_2/Screens/column_screen.dart';
 import 'package:flutter_assignment_2/Screens/container_screen.dart';
 import 'package:flutter_assignment_2/Screens/flutter_layout.dart';
+import 'package:flutter_assignment_2/Screens/image_screen.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
 import 'package:flutter_assignment_2/Screens/rich_text.dart';
 import 'package:flutter_assignment_2/Screens/simple_interest.dart';
@@ -115,6 +116,13 @@ class DashboardScreen extends StatelessWidget {
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>ContainerScreen()));
               }, child: Text("Container Screen")),
+            ),
+
+            SizedBox(height: 20,),
+            SizedBox(
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>ImageScreen()));
+              }, child: Text("Image Screen")),
             )
 
 
