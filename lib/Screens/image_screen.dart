@@ -5,6 +5,14 @@ class ImageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+
+      backgroundColor: Colors.amber[50],
+      body: SafeArea(
+        child: Container(
+          child: Image.asset('assets/images/image1.png'),
+        
+        ) ),
+    );
   }
 }
