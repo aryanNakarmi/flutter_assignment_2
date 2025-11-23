@@ -8,8 +8,11 @@ class ContainerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       body: SafeArea(
-        child:Center(
+        // child:Center(
           child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            alignment: Alignment.centerRight,
             child: Text("Hello"),
           ),
           
@@ -30,7 +33,7 @@ class ContainerScreen extends StatelessWidget {
           // ),
         ),
 
-      ),
+      // ),
     );
   }
 } 
