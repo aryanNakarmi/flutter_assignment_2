@@ -22,7 +22,7 @@ class FlexibleExpandedScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-        
+              width: double.infinity,
               color: Colors.amber,
               child: Text("Container2"),
             ),
