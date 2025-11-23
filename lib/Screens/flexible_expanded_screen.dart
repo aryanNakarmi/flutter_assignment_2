@@ -14,17 +14,28 @@ class FlexibleExpandedScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              width: double.infinity,
-              color: Colors.green,
-              child: Text("Container1"),
+            flex: 1,
+            child: GestureDetector(
+              onTap: ()=> print("This is container1"),
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                color: Colors.green,
+                child: Text("1",style: TextStyle(fontSize: 25),),
+              ),
             ),
           ),
           Expanded(
-            child: Container(
-              width: double.infinity,
-              color: Colors.amber,
-              child: Text("Container2"),
+            flex: 2,
+            child: GestureDetector(
+
+              onTap: ()=> print("This is container2"),
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                color: Colors.amber,
+                child: Text("2",style: TextStyle(fontSize: 25)),
+              ),
             ),
           )
         ], ),
