@@ -19,7 +19,8 @@ class FlexibleExpandedScreen extends StatelessWidget {
             color: Colors.green,
             child: Text("Container1"),
           ),
-          Flexible(
+          Expanded(
+            
             child: Container(
               height: 300,
               color: Colors.amber,
