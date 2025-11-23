@@ -10,9 +10,16 @@ class ImageScreen extends StatelessWidget {
       backgroundColor: Colors.amber[50],
       body: SafeArea(
         child: Container(
-          child: Image.asset('assets/images/image1.png'),
-        
-        ) ),
+          child: Column(
+            children: [
+              Image.asset('assets/images/image1.png'),
+              Image.asset('assets/images/image2.png')
+            ],
+          ),
+          
+        ), 
+      
+        ),
     );
   }
 }
