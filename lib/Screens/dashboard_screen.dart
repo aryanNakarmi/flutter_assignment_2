@@ -123,6 +123,12 @@ class DashboardScreen extends StatelessWidget {
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>ImageScreen()));
               }, child: Text("Image Screen")),
+            ),
+            SizedBox(height: 20,),
+            SizedBox(
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>ImageScreen()));
+              }, child: Text("Image Screen")),
             )
 
 
