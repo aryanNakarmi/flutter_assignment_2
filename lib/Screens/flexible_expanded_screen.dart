@@ -6,8 +6,28 @@ class FlexibleExpandedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text("Flexible Expanded Screen",
+        style: TextStyle(color: Colors.white),
+      ),),
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 300,
+            color: Colors.green,
+            child: Text("Container1"),
+          ),
+          Flexible(
+            child: Container(
+              height: 300,
+              color: Colors.amber,
+              width: double.infinity,
+              child: Text("Container2"),
+            ),
+          )
+        ], ),
     );
   }
 }

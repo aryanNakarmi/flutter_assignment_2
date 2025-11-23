@@ -3,6 +3,7 @@ import 'package:flutter_assignment_2/Screens/area_of_circle.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
 import 'package:flutter_assignment_2/Screens/column_screen.dart';
 import 'package:flutter_assignment_2/Screens/container_screen.dart';
+import 'package:flutter_assignment_2/Screens/flexible_expanded_screen.dart';
 import 'package:flutter_assignment_2/Screens/flutter_layout.dart';
 import 'package:flutter_assignment_2/Screens/image_screen.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
@@ -127,8 +128,8 @@ class DashboardScreen extends StatelessWidget {
             SizedBox(height: 20,),
             SizedBox(
               child: ElevatedButton(onPressed: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>ImageScreen()));
-              }, child: Text("Image Screen")),
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>FlexibleExpandedScreen()));
+              }, child: Text("Flexible Expanded Screen")),
             )
 
 
