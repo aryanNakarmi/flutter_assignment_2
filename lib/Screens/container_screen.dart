@@ -9,6 +9,8 @@ class ContainerScreen extends StatelessWidget {
       backgroundColor: Colors.amber[50],
       body: SafeArea(
         child:Container(
+          width: 200,
+          height: 200,
         color: Colors.amberAccent,
         child: const Text("I am a container"),
         ),
@@ -16,4 +18,4 @@ class ContainerScreen extends StatelessWidget {
       ),
     );
   }
-}
+} 
