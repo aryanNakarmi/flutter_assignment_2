@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Screens/area_of_circle.dart';
 import 'package:flutter_assignment_2/Screens/arithmetic_screen.dart';
 import 'package:flutter_assignment_2/Screens/column_screen.dart';
+import 'package:flutter_assignment_2/Screens/container_screen.dart';
 import 'package:flutter_assignment_2/Screens/flutter_layout.dart';
 import 'package:flutter_assignment_2/Screens/palindrome.dart';
 import 'package:flutter_assignment_2/Screens/rich_text.dart';
@@ -107,7 +108,14 @@ class DashboardScreen extends StatelessWidget {
             SizedBox(width:double.infinity,
             child: ElevatedButton(onPressed: (){
               Navigator.push(context,MaterialPageRoute(builder: (context)=>ColumnScreen()));
-            }, child: Text("Column Screen")), )
+            }, child: Text("Column Screen")), ),
+
+            SizedBox(height: 20,),
+            SizedBox(
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>ContainerScreen()));
+              }, child: Text("Container Screen")),
+            )
 
 
           ],
