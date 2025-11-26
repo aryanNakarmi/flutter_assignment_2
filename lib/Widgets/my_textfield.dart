@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 
 class MyTextfield extends StatelessWidget {
-  const MyTextfield({super.key});
+  const MyTextfield({super.key,
+  required this.onChanged,
+  required this.text});
 
+  final ValueChanged<String> onChanged;
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: text,
+        border: const OutlineInputBorder()
+      ),
+      onChanged: onChanged,
+      validator:(value){
+        if(value!.isEmpty){
+          return 'Please enter some text';
+        }
+        return null;
+      },
+    );
   }
 }
