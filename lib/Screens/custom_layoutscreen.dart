@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_2/Widgets/my_button.dart';
 import 'package:flutter_assignment_2/app.dart';
 
 class CustomLayoutscreen extends StatelessWidget {
@@ -9,7 +10,10 @@ class CustomLayoutscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Custom Buttom Screen"),
-      )
+      ),
+      body: Center(
+        child: MyButton(onPressed: (){}, text: 'Click Me'),
+      ),
     );
   }
 }
