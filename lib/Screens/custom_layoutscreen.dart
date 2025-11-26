@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_2/Widgets/my_button.dart';
+import 'package:flutter_assignment_2/Widgets/my_textfield.dart';
 
 
 class CustomLayoutscreen extends StatelessWidget {
@@ -12,7 +13,20 @@ class CustomLayoutscreen extends StatelessWidget {
         title: const Text("Custom Buttom Screen"),
       ),
       body: Center(
-        child: MyButton(onPressed: (){}, text: 'Click Me'),
+        child: Row(
+          children: [
+          
+           MyTextfield(onChanged: (value){
+            setState((){
+              name = value;
+            });
+           }, text: "Enter Name"),
+           MyButton(onPressed: (){}, text: 'Click Me'),
+
+          ],
+        ),
+
+
       ),
     );
   }
