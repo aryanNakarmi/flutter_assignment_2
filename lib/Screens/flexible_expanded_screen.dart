@@ -19,7 +19,8 @@ class FlexibleExpandedScreen extends StatelessWidget {
             child: GestureDetector(
               onTap: ()=> showMySnackBar(context: context, message: "Container1"),
               child: Container(
-                alignment: Alignment.center,
+                alignment: Alignment
+                .center,
                 width: double.infinity,
                 color: Colors.green,
                 child: Text("1",style: TextStyle(fontSize: 25),
