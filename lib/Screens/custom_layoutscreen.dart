@@ -19,9 +19,8 @@ class _CustomLayoutscreenState extends State<CustomLayoutscreen> {
         title: const Text("Custom Buttom Screen"),
       ),
       body: Center(
-        child: Row(
+        child: Column(
           children: [
-          
            MyTextfield(onChanged: (value){
             setState((){
               name = value;
