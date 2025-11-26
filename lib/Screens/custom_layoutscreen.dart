@@ -3,9 +3,15 @@ import 'package:flutter_assignment_2/Widgets/my_button.dart';
 import 'package:flutter_assignment_2/Widgets/my_textfield.dart';
 
 
-class CustomLayoutscreen extends StatelessWidget {
+class CustomLayoutscreen extends StatefulWidget {
   const CustomLayoutscreen({super.key});
 
+  @override
+  State<CustomLayoutscreen> createState() => _CustomLayoutscreenState();
+}
+
+class _CustomLayoutscreenState extends State<CustomLayoutscreen> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
